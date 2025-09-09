@@ -174,3 +174,8 @@ packages/
 # Development files
 debug/
 scratch/
+
+# Benchmarks and validation results
+benchmark_results/
+validation_report.json
+demo_*.py
