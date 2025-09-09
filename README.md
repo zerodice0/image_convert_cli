@@ -16,6 +16,7 @@ Transform your images with AI! NanoBanana is a powerful yet easy-to-use tool tha
 
 ### 🎨 **AI-Powered Transformation**
 - Transform images with natural language prompts
+- **🆕 Image Variation Generation**: Create multiple unique variations from a single image
 - Support for multiple artistic styles (vintage, artistic, cinematic, etc.)
 - Batch processing for handling multiple images at once
 
@@ -60,16 +61,25 @@ python batch_nanobanana_gui.py
 
 **CLI Version (For advanced users):**
 ```bash
+# Traditional batch processing
 python batch_nanobanana_cli.py \
   --input-dir ./photos \
   --output-dir ./results \
   --prompt "Transform this photo into a beautiful painting"
+
+# NEW: Image variation generation
+python batch_nanobanana_cli.py --variation \
+  --image photo.jpg \
+  --count 5 \
+  --variation-type random \
+  --output-dir variations
 ```
 
 ## 📖 Documentation
 
 - 📋 **[Installation Guide](INSTALL_GUIDE.md)** - Detailed setup instructions
-- 📚 **[Usage Guide](USAGE_GUIDE.md)** - Complete user manual with examples  
+- 📚 **[Usage Guide](USAGE_GUIDE.md)** - Complete user manual with examples
+- 🎨 **[Image Variation Guide](docs/IMAGE_VARIATION_GUIDE.md)** - New variation generation features  
 - ⚡ **[Quick Reference](QUICK_REFERENCE.md)** - Command cheat sheet
 - 🚨 **[Troubleshooting](TROUBLESHOOTING.md)** - Common issues and solutions
 - 💻 **[CLI Documentation](README_CLI.md)** - Advanced command-line usage
