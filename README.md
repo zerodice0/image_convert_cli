@@ -68,9 +68,17 @@ python batch_nanobanana_cli.py \
   --prompt "Transform this photo into a beautiful painting"
 
 # NEW: Image variation generation
+# Single image variation
 python batch_nanobanana_cli.py --variation \
   --image photo.jpg \
   --count 5 \
+  --variation-type random \
+  --output-dir variations
+
+# Multiple images variation (batch)
+python batch_nanobanana_cli.py --variation \
+  --input-dir ./photos \
+  --count 3 \
   --variation-type random \
   --output-dir variations
 ```
@@ -111,6 +119,23 @@ python workflows/creator_multistyle.py \
   photo.jpg \
   --preset artistic \
   --output style_comparisons
+```
+
+### Image Variation Generation
+```bash
+# Create variations of a single image
+python batch_nanobanana_cli.py --variation \
+  --image portrait.jpg \
+  --count 5 \
+  --variation-type object_rearrange \
+  --output-dir portrait_variations
+
+# Generate variations for multiple images
+python batch_nanobanana_cli.py --variation \
+  --input-dir product_photos \
+  --count 3 \
+  --variation-type random \
+  --output-dir product_variations
 ```
 
 ## 🛠️ Advanced Features

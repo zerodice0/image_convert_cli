@@ -68,22 +68,22 @@ python batch_nanobanana_cli.py --variation \
   --output-dir mixed_variations
 ```
 
-### 배치 변형 생성
+### 다중 이미지 변형 생성
 ```bash
 # 여러 이미지를 각각 3개씩 변형
-python batch_nanobanana_cli.py --batch-variation \
+python batch_nanobanana_cli.py --variation \
   --input-dir ./photos \
-  --count-per-image 3 \
+  --count 3 \
   --output-dir ./batch_variations \
-  --parallel 2
+  --variation-type random
 
-# 특정 확장자만 처리
-python batch_nanobanana_cli.py --batch-variation \
+# 특정 변형 타입으로 다중 처리
+python batch_nanobanana_cli.py --variation \
   --input-dir ./images \
-  --extensions "jpg,png,webp" \
-  --count-per-image 5 \
+  --count 5 \
+  --variation-type object_rearrange \
   --output-dir ./variations \
-  --parallel 4
+  --verbose
 ```
 
 ### 고급 옵션 활용

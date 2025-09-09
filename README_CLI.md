@@ -87,6 +87,13 @@ python batch_nanobanana_cli.py \
 - `--quiet, -q`: 확인 메시지 생략
 - `--log-file, -l`: 로그 파일 경로 지정
 
+### 이미지 변형 생성 매개변수
+
+- `--variation`: 이미지 변형 생성 모드 활성화
+- `--image`: 단일 이미지 파일 경로 (variation 모드용)
+- `--count`: 생성할 변형 이미지 수 (기본값: 3)
+- `--variation-type`: 변형 유형 (object_rearrange, object_add, object_remove, style_change, composition, random)
+
 ## 사용 예시
 
 ### 1. 기본 사용 (환경변수)
@@ -127,6 +134,26 @@ python batch_nanobanana_cli.py \
   -o ./test_output \
   -p "Test prompt" \
   --dry-run \
+  --verbose
+```
+
+### 5. 이미지 변형 생성 (단일 이미지)
+```bash
+export GEMINI_API_KEY="your-api-key"
+python batch_nanobanana_cli.py --variation \
+  --image portrait.jpg \
+  --output-dir portrait_variations \
+  --count 5 \
+  --variation-type object_rearrange
+```
+
+### 6. 이미지 변형 생성 (여러 이미지)
+```bash
+python batch_nanobanana_cli.py --variation \
+  --input-dir ./photos \
+  --output-dir ./variations \
+  --count 3 \
+  --variation-type random \
   --verbose
 ```
 
