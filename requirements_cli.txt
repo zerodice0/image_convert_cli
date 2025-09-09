@@ -1,0 +1,27 @@
+# Batch NanoBanana CLI Requirements
+# Command-line interface dependencies for Linux environments
+
+# Core API and image processing
+google-genai>=0.7.0
+Pillow>=10.0.0
+
+# CLI user interface and progress
+rich>=13.0.0
+tqdm>=4.65.0
+
+# Configuration and environment management
+python-dotenv>=1.0.0
+
+# Compatibility for concurrent processing
+tenacity>=8.1.0,<9
+
+# System compatibility
+protobuf>=3.20,<5
+
+# Optional: Enhanced terminal features
+colorama>=0.4.6; platform_system == "Windows"
+
+# Development and testing (optional)
+pytest>=7.0.0
+pytest-mock>=3.10.0
+black>=23.0.0

@@ -1,0 +1,17 @@
+# Batch NanoBanana Image Generator Requirements
+
+# Core dependencies
+google-genai>=0.7.0
+Pillow>=10.0.0
+
+# Streamlit compatible versions (if you have streamlit installed)
+protobuf>=3.20,<5
+rich>=10.14.0,<14
+tenacity>=8.1.0,<9
+
+# Optional for enhanced functionality
+tqdm>=4.65.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=23.0.0
